@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ticket-booking-deployment
+  labels:
+    app: ticket-booking
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: ticket-booking
+  template:
+    metadata:
+      labels:
+        app: ticket-booking
+    spec:
+      containers:
+        - name: ticket-booking
+          image: <IMAGE_PLACEHOLDER>
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_ENV
+              value: production
