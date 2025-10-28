@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.env
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.log
+
+# Kubernetes generated manifests
+k8s/deployment.generated.yaml
